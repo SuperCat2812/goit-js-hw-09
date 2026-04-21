@@ -1,7 +1,5 @@
 // Описаний в документації
 import SimpleLightbox from 'simplelightbox';
-// Додатковий імпорт стилів
-import 'simplelightbox/dist/simple-lightbox.min.css';
 
 // <li class="gallery-item">
 // 	<a class="gallery-link" href="large-image.jpg">
