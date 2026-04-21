@@ -61,17 +61,6 @@ const images = [
   },
 ];
 
-// <li class="gallery-item">
-//   <a class="gallery-link" href="large-image.jpg">
-//     <img
-//       class="gallery-image"
-//       src="small-image.jpg"
-//       data-source="large-image.jpg"
-//       alt="Image description"
-//     />
-//   </a>
-// </li>
-
 const galleryList = document.querySelector('.gallery');
 
 const markup = images
@@ -90,19 +79,9 @@ const markup = images
   .join('');
 galleryList.innerHTML = markup;
 
-galleryList.addEventListener('click', onGalleryListClick);
-
-function onGalleryListClick(evt) {
-  evt.preventDefault();
-  if (evt.target.nodeName !== 'IMG') {
-    return;
-  }
-  const scr = evt.target.dataset.source;
-  const alt = evt.target.alt;
-  const instance = new SimpleLightbox('.gallery-item a', {
-    caption: true,
-    captionsData: 'alt',
-    captionPosition: 'bottom',
-    captionDelay: 20,
-  });
-}
+const instance = new SimpleLightbox('.gallery-item a', {
+  caption: true,
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+});
