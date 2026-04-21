@@ -2,7 +2,7 @@ const refs = {
   user_email: document.querySelector('input[type="email"]'),
   user_message: document.querySelector('textarea'),
   user_form: document.querySelector('.feedback-form'),
-  user_btn: document.querySelector('button[type="submit]'),
+  user_btn: document.querySelector('button[type="submit"]'),
 };
 
 const STORAGE_KEYS = {
@@ -47,8 +47,8 @@ function onSubmitForm(event) {
 
     localStorage.removeItem(STORAGE_KEYS.USER_FORM);
     refs.user_form.reset();
-    formData.email = email;
-    formData.message = message;
+    formData.email = '';
+    formData.message = '';
   }
 }
 
